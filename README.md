@@ -1,4 +1,3 @@
-# 小组长：cuiyijian
 # 甘雨MOD - Slay the Spire 角色扩展
 
 ## 项目简介

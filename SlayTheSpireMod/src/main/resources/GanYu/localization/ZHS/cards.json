@@ -3,5 +3,55 @@
     "NAME": "打击",
     "DESCRIPTION": "造成 !D! 点伤害。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "Gan_Yu:Defend": {
+    "NAME": "格挡",
+    "DESCRIPTION": "获得 !B! 点格挡。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点格挡。"
+  },
+  "Gan_Yu:IceLotus": {
+    "NAME": "山泽麟迹",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 获得 !B! 点格挡。 NL 给予所有敌人1层 虚弱 。",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 获得 !B! 点格挡。 NL 获得2层 虚弱 。"
+  },
+  "Gan_Yu:CalmAndCollected": {
+    "NAME": "风轻云淡",
+    "DESCRIPTION": "获得4点 敏捷 ，回复5点生命",
+    "UPGRADE_DESCRIPTION": "获得6点 敏捷 ，回复5点生命"
+  },
+  "Gan_Yu:RelaxBySelf": {
+    "NAME": "悠然自得",
+    "DESCRIPTION": "消耗，抽4张牌，回复3 [E] ，生成一张 虚空 进入抽牌堆 ",
+    "UPGRADE_DESCRIPTION": "消耗，抽5张牌，回复4 [E] ，生成一张 虚空 进入抽牌堆 "
+  },
+  "Gan_Yu:Handy":{
+    "NAME": "得心应手",
+    "DESCRIPTION": "每当你消耗两层 ganyu:蓄力 时，获得2点 力量",
+    "UPGRADE_DESCRIPTION": "每当你消耗两层 ganyu:蓄力 时，获得3点 力量"
+  },
+  "Gan_Yu:HideBow":{
+    "NAME": "藏弓待用",
+    "DESCRIPTION": "只有作为手里唯一的攻击牌时可以使用，造成 !D! 点伤害",
+    "UPGRADE_DESCRIPTION": "只有作为手里唯一的攻击牌时可以使用，造成 !D! 点伤害"
+  },
+  "Gan_Yu:Hail":{
+    "NAME": "降众天华",
+    "DESCRIPTION": "对所有的敌人造成 !D! 点伤害4次",
+    "UPGRADE_DESCRIPTION": "对所有的敌人造成 !D! 点伤害5次"
+  },
+  "Gan_Yu:Ready": {
+    "NAME": "蓄势待发",
+    "DESCRIPTION": "获得1层 ganyu:蓄力",
+    "UPGRADE_DESCRIPTION": "获得1层 ganyu:蓄力"
+},
+  "Gan_Yu:Kylin":{
+    "NAME": "麟迹天华",
+    "DESCRIPTION": "获得5层 再生 ，获得3点 敏捷",
+    "UPGRADE_DESCRIPTION": "获得7层 再生 ，获得4点 敏捷"
+  },
+  "Gan_Yu:Hide":{
+    "NAME": "麒麟之影",
+    "DESCRIPTION": "消耗，获得1层 缓冲",
+    "UPGRADE_DESCRIPTION": "消耗，获得2层 缓冲"
   }
 }

@@ -16,13 +16,14 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
-import com.megacrit.cardcrawl.relics.Vajra;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbInterface;
 
 import Gan_Yu.cards_GY.Defend;
 import Gan_Yu.cards_GY.Strike;
 import Gan_Yu.modcore_GY.Gan_Yu;
+import Gan_Yu.relics_GY.AMoze;
+
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.AbstractAnimation;
 
@@ -101,7 +102,7 @@ public class GanYu extends CustomPlayer {
     // 初始遗物的ID，可以先写个原版遗物凑数
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-        retVal.add(Vajra.ID);
+        retVal.add(AMoze.ID);
         return retVal;
     }
 

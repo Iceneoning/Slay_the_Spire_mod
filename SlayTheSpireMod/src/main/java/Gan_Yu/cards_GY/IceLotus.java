@@ -58,7 +58,8 @@ public class IceLotus extends CustomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         // 对所有敌人造成伤害
-        addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+    addToBot(new com.megacrit.cardcrawl.actions.utility.SFXAction("ATTACK_HEAVY"));
+    addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         
         // 获得格挡
         addToBot(new GainBlockAction(p, p, this.block));

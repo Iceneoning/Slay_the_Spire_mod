@@ -1,0 +1,23 @@
+{
+  "Gan_Yu:AMoze": {
+    "NAME": "阿莫斯之弓",
+    "FLAVOR": "甘雨の专武",
+    "DESCRIPTIONS": [
+      "战斗开始时，获得 #b1 层 #yganyu:蓄力 "
+    ]
+  },
+  "Gan_Yu:KylinArrow": {
+    "NAME": "麒麟之弓",
+    "FLAVOR": "阿莫斯的进化，更加符合麒麟传人的使用",
+    "DESCRIPTIONS": [
+      "替换 #y阿莫斯之弓 ，每打出1张非攻击牌，获得 #b1 层 #yganyu:蓄力 "
+    ]
+  },
+  "Gan_Yu:WorkOverTimeRelic": {
+    "NAME": "加班合同",
+    "FLAVOR": "干不完了，要加班了",
+    "DESCRIPTIONS": [
+        "每回合开始时,获得 [E] ;每回合开始时，往抽牌堆中加入 #b1 张 眩晕 "
+    ]
+  }
+}

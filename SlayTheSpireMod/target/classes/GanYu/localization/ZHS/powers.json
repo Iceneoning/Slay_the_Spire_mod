@@ -2,7 +2,7 @@
   "Gan_Yu:ChargePower": {
     "NAME": "蓄力",
     "DESCRIPTIONS": [
-      "每拥有一层蓄力，就获得 #b6 点力量；当蓄力达到两层时，下一张攻击牌攻击所有目标。NL蓄力上限2层，打出攻击牌时失去所有蓄力以及蓄力所带来的力量"
+      "每拥有一层蓄力，就获得 #b6 点力量； NL 蓄力上限2层，打出攻击牌或者生命值损失时消耗所有蓄力以及蓄力所带来的力量"
     ]
   },
   "Gan_Yu:HandyPower": {
@@ -10,6 +10,56 @@
     "DESCRIPTIONS": [
       "每当你消耗两层蓄力时，获得 ",
       " 点力量"
+    ]
+  },
+  "Gan_Yu:AttackToDefendPower": {
+    "NAME": "以攻为守",
+    "DESCRIPTIONS": [
+      "每当你获得或者消耗1层蓄力时，获得 ",
+      " 点格挡"
+    ]
+  },
+  "Gan_Yu:GoAllOutPower": {
+    "NAME": "全力以赴",
+    "DESCRIPTIONS": [
+      "每当你消耗蓄力时，获得 [E] "
+    ]
+  },
+  "Gan_Yu:FrostPower": {
+    "NAME": "冰霜",
+    "DESCRIPTIONS": [
+      "每造成一次伤害，就基于造成伤害的目标一层 易伤 "
+    ]
+  },
+  "Gan_Yu:IceArmorPower": {
+    "NAME": "冰甲",
+    "DESCRIPTIONS": [
+      "本回合内每被攻击一次，就给予敌方 ",
+      " 层 虚弱 "
+    ]
+  },
+  "Gan_Yu:WorkOverTimePower": {
+    "NAME": "加班形态",
+    "DESCRIPTIONS": [
+      "每回合开始时，获得1层 蓄力 ，回复1 [E] ，抽1张牌。"
+    ]
+  },
+  "Gan_Yu:CountlessTrialsPower": {
+    "NAME": "千锤百炼",
+    "DESCRIPTIONS": [
+      "本回合使用攻击牌时，也可以获得1层 蓄力 。 NL 先消耗再获得"
+    ]
+  },
+  "Gan_Yu:EndPower": {
+    "NAME": "终结",
+    "DESCRIPTIONS": [
+      "本回合你的 蓄力 将保持在","层"
+    ]
+  },
+  "Gan_Yu:ChargeConsumedThisTurn": {
+    "NAME": "蓄力消耗",
+    "DESCRIPTIONS": [
+      "本回合已消耗蓄力"
     ]
   }
 }

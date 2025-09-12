@@ -48,9 +48,8 @@ public class Hail extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         // 对所有敌人造成多次伤害
         for (int i = 0; i < this.magicNumber; i++) {
-            AbstractDungeon.actionManager.addToBottom(
-                new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_LIGHT)
-            );
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.utility.SFXAction("ATTACK_HEAVY"));
+            AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         }
     }
 

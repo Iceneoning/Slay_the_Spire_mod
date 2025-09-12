@@ -9,25 +9,49 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.localization.Keyword;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-
+import com.megacrit.cardcrawl.localization.RelicStrings;
+import Gan_Yu.cards_GY.AttackToDefend;
+import Gan_Yu.cards_GY.Blessedness;
 import Gan_Yu.cards_GY.CalmAndCollected;
+import Gan_Yu.cards_GY.CountlessTrials;
+import Gan_Yu.cards_GY.Dartle;
 import Gan_Yu.cards_GY.Defend;
+import Gan_Yu.cards_GY.End;
+import Gan_Yu.cards_GY.EndTheWork;
+import Gan_Yu.cards_GY.Frost;
+import Gan_Yu.cards_GY.FrostBlooms;
+import Gan_Yu.cards_GY.FrozenThousand;
+import Gan_Yu.cards_GY.GoAllOut;
 import Gan_Yu.cards_GY.Hail;
 import Gan_Yu.cards_GY.Handy;
+import Gan_Yu.cards_GY.HappyTime;
+import Gan_Yu.cards_GY.HardWork;
+import Gan_Yu.cards_GY.HeartProtective;
 import Gan_Yu.cards_GY.Hide;
 import Gan_Yu.cards_GY.HideBow;
+import Gan_Yu.cards_GY.IceArmor;
+import Gan_Yu.cards_GY.IceArrow;
+import Gan_Yu.cards_GY.IceAttack;
 import Gan_Yu.cards_GY.IceLotus;
 import Gan_Yu.cards_GY.Kylin;
+import Gan_Yu.cards_GY.OnlyThisHeart;
 import Gan_Yu.cards_GY.Ready;
 import Gan_Yu.cards_GY.RelaxBySelf;
+import Gan_Yu.cards_GY.StormShooting;
 import Gan_Yu.cards_GY.Strike;
+import Gan_Yu.cards_GY.Winter;
+import Gan_Yu.cards_GY.WorkOverTime;
 import Gan_Yu.character_GY.GanYu;
 import Gan_Yu.character_GY.GanYu.PlayerColorEnum;
+import Gan_Yu.relics_GY.*;
+
 import basemod.BaseMod;
+import basemod.helpers.RelicType;
 import basemod.interfaces.EditCardsSubscriber;
 import basemod.interfaces.EditCharactersSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
 import basemod.interfaces.EditKeywordsSubscriber;
+import basemod.interfaces.EditRelicsSubscriber;
 
 import static Gan_Yu.character_GY.GanYu.PlayerColorEnum.GAN_YU_GREEN;
 
@@ -38,7 +62,7 @@ import com.badlogic.gdx.graphics.Color;
 
 @SpireInitializer
 public class Gan_Yu implements EditCardsSubscriber, EditStringsSubscriber,
-EditCharactersSubscriber, EditKeywordsSubscriber { // 添加EditKeywordsSubscriber接口
+EditCharactersSubscriber, EditKeywordsSubscriber, EditRelicsSubscriber { // 添加EditKeywordsSubscriber接口
 
     public static final Color MY_COLOR = new Color(62.0f / 255.0f, 237.0f / 255.0f, 231.0f / 255.0f, 1.0f); // 定义卡牌颜色
     // 人物选择界面按钮的图片
@@ -94,6 +118,26 @@ EditCharactersSubscriber, EditKeywordsSubscriber { // 添加EditKeywordsSubscrib
         BaseMod.addCard(new HideBow());
         BaseMod.addCard(new Kylin());
         BaseMod.addCard(new Hail());
+        BaseMod.addCard(new IceArmor());
+        BaseMod.addCard(new HeartProtective());
+        BaseMod.addCard(new HardWork());
+        BaseMod.addCard(new FrostBlooms());
+        BaseMod.addCard(new GoAllOut());
+        BaseMod.addCard(new AttackToDefend());
+        BaseMod.addCard(new WorkOverTime());
+        BaseMod.addCard(new Dartle());
+        BaseMod.addCard(new FrozenThousand());
+        BaseMod.addCard(new OnlyThisHeart());
+        BaseMod.addCard(new Frost());
+        BaseMod.addCard(new IceArrow());
+        BaseMod.addCard(new HappyTime());
+        BaseMod.addCard(new EndTheWork());
+        BaseMod.addCard(new Blessedness());
+        BaseMod.addCard(new CountlessTrials());
+        BaseMod.addCard(new Winter());
+        BaseMod.addCard(new IceAttack());
+        BaseMod.addCard(new StormShooting());
+        BaseMod.addCard(new End());   
     }
 
     @Override
@@ -104,23 +148,35 @@ EditCharactersSubscriber, EditKeywordsSubscriber { // 添加EditKeywordsSubscrib
         } else {
             lang = "ENG";
         }
+        // 卡牌
         BaseMod.loadCustomStringsFile(CardStrings.class, "GanYu/localization/" + lang + "/cards.json");
+        // 能力
         BaseMod.loadCustomStringsFile(PowerStrings.class, "GanYu/localization/" + lang + "/powers.json");
+        // 角色
         BaseMod.loadCustomStringsFile(CharacterStrings.class, "GanYu/localization/" + lang + "/characters.json");
+        // 遗物
+        BaseMod.loadCustomStringsFile(RelicStrings.class, "GanYu/localization/" + lang + "/relics.json");
     }
     
        @Override
-        public void receiveEditKeywords() {
-        Gson gson = new Gson();
+       public void receiveEditKeywords() {
+           Gson gson = new Gson();
 
-        String json = Gdx.files.internal("GanYu/localization/ZHS/keywords.json")
-                .readString(String.valueOf(StandardCharsets.UTF_8));
-        Keyword[] keywords = gson.fromJson(json, Keyword[].class);
-        if (keywords != null) {
-            for (Keyword keyword : keywords) {
-                // 这个id要全小写
-                BaseMod.addKeyword("ganyu", keyword.NAMES[0], keyword.NAMES, keyword.DESCRIPTION);
-            }
-        }
+           String json = Gdx.files.internal("GanYu/localization/ZHS/keywords.json")
+                   .readString(String.valueOf(StandardCharsets.UTF_8));
+           Keyword[] keywords = gson.fromJson(json, Keyword[].class);
+           if (keywords != null) {
+               for (Keyword keyword : keywords) {
+                   // 这个id要全小写
+                   BaseMod.addKeyword("ganyu", keyword.NAMES[0], keyword.NAMES, keyword.DESCRIPTION);
+               }
+           }
+       }
+    
+    @Override
+    public void receiveEditRelics() {
+        BaseMod.addRelicToCustomPool(new AMoze(), GAN_YU_GREEN);
+        BaseMod.addRelic(new WorkOverTimeRelic(), RelicType.SHARED);
+        BaseMod.addRelicToCustomPool(new KylinArrow(), GAN_YU_GREEN);
     }
 }

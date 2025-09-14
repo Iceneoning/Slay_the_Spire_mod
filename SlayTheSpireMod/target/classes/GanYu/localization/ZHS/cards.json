@@ -11,8 +11,8 @@
   },
   "Gan_Yu:IceLotus": {
     "NAME": "山泽麟迹",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 获得 !B! 点格挡。 NL 给予所有敌人1层 虚弱 。",
-    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 获得 !B! 点格挡。 NL 获得2层 虚弱 。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 获得 !B! 点格挡。给予所有敌人1层 虚弱 。",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 获得 !B! 点格挡。给予所有敌人2层 虚弱 。"
   },
   "Gan_Yu:CalmAndCollected": {
     "NAME": "风轻云淡",
@@ -22,7 +22,7 @@
   "Gan_Yu:RelaxBySelf": {
     "NAME": "悠然自得",
     "DESCRIPTION": "消耗 ，抽4张牌，回复3 [E] ，生成一张 虚空 进入抽牌堆 ",
-    "UPGRADE_DESCRIPTION": "消耗，抽5张牌，回复4 [E] ，生成一张 虚空 进入抽牌堆 "
+    "UPGRADE_DESCRIPTION": "消耗 ，抽5张牌，回复4 [E] ，生成一张 虚空 进入抽牌堆 "
   },
   "Gan_Yu:Handy":{
     "NAME": "得心应手",
@@ -56,32 +56,32 @@
   },
   "Gan_Yu:AttackToDefend":{
     "NAME": "以攻为守",
-    "DESCRIPTION": "每当你获得或者消耗1层 ganyu:蓄力 时，获得 !B! 点格挡。",
-    "UPGRADE_DESCRIPTION": "固有 ，每当你获得或者消耗 ganyu:蓄力 时，获得 !B! 点格挡。"
+    "DESCRIPTION": " 每当你获得或者消耗1层 ganyu:蓄力 时，获得4点格挡。",
+    "UPGRADE_DESCRIPTION": "固有 ，每当你获得或者消耗 ganyu:蓄力 时，获得6点格挡。"
   },
   "Gan_Yu:GoAllOut": {
     "NAME": "全力以赴",
-    "DESCRIPTION": "当你消耗 ganyu:蓄力 时，获得 [E] ",
+    "DESCRIPTION": " 当你消耗 ganyu:蓄力 时，获得 [E] ",
     "UPGRADE_DESCRIPTION": "当你消耗 ganyu:蓄力 时，获得 [E] "
   },
   "Gan_Yu:HardWork": {
     "NAME": "勤学苦练",
-    "DESCRIPTION": "消耗 ，升级手上的1张手牌",
+    "DESCRIPTION": " 消耗 ，升级手上的1张手牌",
     "UPGRADE_DESCRIPTION": "消耗 ，升级手上的2张手牌"
   },
   "Gan_Yu:WorkOverTime": {
     "NAME": "加班形态",
-    "DESCRIPTION": " 虚无 。 NL 每回合开始时，获得1层 ganyu:蓄力 ，回复1 [E] ，抽1张牌。",
-    "UPGRADE_DESCRIPTION": "每回合开始时，获得1层 ganyu:蓄力 ，回复1 [E] ，抽1张牌。"
+    "DESCRIPTION": " 虚无 ;从当前回合开始,每回合获得2层 ganyu:蓄力 ,回复3 [E] ,抽2张牌。四个回合过后,你死亡",
+    "UPGRADE_DESCRIPTION": " 虚无 ;从当前回合开始,每回合获得2层 ganyu:蓄力 ,回复3 [E] ,抽2张牌。四个回合过后,你死亡"
   },
   "Gan_Yu:Frost": {
     "NAME": "冰霜",
-    "DESCRIPTION": "该回合内，你每造成一次伤害，就基于造成伤害的目标一层 易伤 ",
-    "UPGRADE_DESCRIPTION": "该回合内，你每造成一次伤害，就基于造成伤害的目标一层 易伤 "
+    "DESCRIPTION": " 该回合内，你每造成一次伤害，就给予造成伤害的目标一层 易伤 ",
+    "UPGRADE_DESCRIPTION": "该回合内，你每造成一次伤害，就给于造成伤害的目标一层 易伤 "
   },
   "Gan_Yu:OnlyThisHeart": {
     "NAME": "唯此一心",
-    "DESCRIPTION": "若本回合消耗过 ganyu:蓄力 ，抽2张牌",
+    "DESCRIPTION": " 若本回合消耗过 ganyu:蓄力 ，抽2张牌",
     "UPGRADE_DESCRIPTION": "若本回合消耗过 ganyu:蓄力 ，抽2张牌"
   },
   "Gan_Yu:FrozenThousand":{
@@ -91,8 +91,8 @@
   },
   "Gan_Yu:FrostBlooms":{
     "NAME": "霜华矢",
-    "DESCRIPTION": "ganyu:蓄力 为2时才能打出，对所有敌人造成 !D! 点伤害 2 次",
-    "UPGRADE_DESCRIPTION": "ganyu:蓄力 为2时才能打出，对所有敌人造成 !D! 点伤害 2 次"
+    "DESCRIPTION": " ganyu:蓄力 为2时才能打出，对所有敌人造成 !D! 点伤害 2 次",
+    "UPGRADE_DESCRIPTION": " ganyu:蓄力 为2时才能打出，对所有敌人造成 !D! 点伤害 2 次"
   },
   "Gan_Yu:IceArrow":{
     "NAME": "冰霜箭",
@@ -122,7 +122,7 @@
   "Gan_Yu:EndTheWork": {
     "NAME": "下班",
     "DESCRIPTION": " ganyu:蓄力 为2时可以打出，回复1 [E] ，抽1张牌。",
-    "UPGRADE_DESCRIPTION": " ganyu:蓄力 为2，时可以打出，回复1 [E] ，抽2张牌。"
+    "UPGRADE_DESCRIPTION": " ganyu:蓄力 为2时可以打出，回复1 [E] ，抽2张牌。"
   },
   "Gan_Yu:Blessedness": {
     "NAME": "幸福",
@@ -153,5 +153,62 @@
     "NAME": "终结",
     "DESCRIPTION": " 消耗 , 虚无 ，本回合你的 ganyu:蓄力 将保持在2层",
     "UPGRADE_DESCRIPTION": " 消耗 ，本回合你的 ganyu:蓄力 将保持在2层"
+  },
+  "Gan_Yu:Pray": {
+    "NAME": "祈祷",
+    "DESCRIPTION": "当你消耗 ganyu:蓄力 时，抽1张牌",
+    "UPGRADE_DESCRIPTION": "当你消耗 ganyu:蓄力 时，抽1张牌"
+  },
+  "Gan_Yu:Cool": {
+    "NAME": "超限！！！",
+    "DESCRIPTION": "消耗 ，获得2层  ganyu:蓄力 ，回复3 [E] ，抽3张牌，回合结束时受到20 点伤害",
+    "UPGRADE_DESCRIPTION": "消耗 ，获得2层  ganyu:蓄力 ，回复4 [E] ，抽4张牌，回合结束时受到20 点伤害"
+  },
+  "Gan_Yu:Cheer": {
+    "NAME": "欢呼",
+    "DESCRIPTION": "获得1层 ganyu:蓄力 ，获得 !B! 点格挡",
+    "UPGRADE_DESCRIPTION": "获得2层 ganyu:蓄力 ，获得 !B! 点格挡"
+  },
+  "Gan_Yu:NightSnow": {
+    "NAME": "雪夜",
+    "DESCRIPTION": "消耗 ，获得1层 ganyu:蓄力 ，给予所有敌人2层 虚弱 ，2层 易伤",
+    "UPGRADE_DESCRIPTION": "消耗 ，获得2层 ganyu:蓄力 ，给予所有敌人3层 虚弱 ，3层 易伤"
+  },
+  "Gan_Yu:MilkTea": {
+    "NAME": "奶茶",
+    "DESCRIPTION": "消耗 ，回复12点生命，本回合无法打出攻击牌",
+    "UPGRADE_DESCRIPTION": "消耗 ，回复16点生命，本回合无法打出攻击牌"
+  },
+  "Gan_Yu:WaitForTheFuture": {
+    "NAME": "静等光阴",
+    "DESCRIPTION": "虚无 ，获得 ganyu:蓄力 2层，获得 !B! 点格挡",
+    "UPGRADE_DESCRIPTION": "虚无 ，获得 ganyu:蓄力 2层，获得 !B! 点格挡"
+  },
+  "Gan_Yu:SmileFace": {
+    "NAME": "欢颜",
+    "DESCRIPTION": "往抽牌堆中加入1张 虚空 和 晕眩 ,获得 ganyu:蓄力 2层",
+    "UPGRADE_DESCRIPTION": "往抽牌堆中加入1张 虚空 ,获得 ganyu:蓄力 2层"
+  },
+  "Gan_Yu:RiverDaySnow": {
+    "NAME": "江天暮雪",
+    "DESCRIPTION": "获得1层 ganyu:蓄力 ，随后随机造成 !D! 点伤害 3 次",
+    "UPGRADE_DESCRIPTION": "获得2层 ganyu:蓄力 ，随后随机造成 !D! 点伤害 3 次"
+  },
+  "Gan_Yu:GoWithMe": {
+    "NAME": "随我同行",
+    "DESCRIPTION": "虚无 ,获得2层 ganyu:蓄力",
+    "UPGRADE_DESCRIPTION": "虚无 ,获得2层 ganyu:蓄力"
+ },
+ "Gan_Yu:TheGodOnMoon": {
+    "NAME": "月下飞仙",
+    "DESCRIPTION": "获得2层 ganyu:蓄力",
+    "UPGRADE_DESCRIPTION": "获得2层 ganyu:蓄力"
+  },
+  "Gan_Yu:UnderTheMoon": {
+    "NAME": "花前月下",
+    "DESCRIPTION": "获得1层 ganyu:蓄力 , 获得 [E] ,并往抽牌堆中加入1张 虚空 和 晕眩 和 灼伤",
+    "UPGRADE_DESCRIPTION": "获得2层 ganyu:蓄力 , 获得 [E] ,并往抽牌堆中加入1张 虚空 和 晕眩 和 灼伤"
   }
 }
+
+  

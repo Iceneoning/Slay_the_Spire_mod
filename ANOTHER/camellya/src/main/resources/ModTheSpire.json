@@ -1,0 +1,14 @@
+{
+    "modid": "camellya",
+    "name": "椿",
+    "author_list": [
+        "Iceneoning"
+    ], 
+    "description": "作为学校作业的mod。",
+    "version": "0.0.1", 
+    "sts_version": "12-22-2020", 
+    "mts_version": "3.23.2", 
+    "dependencies": [
+        "basemod"
+    ] 
+}

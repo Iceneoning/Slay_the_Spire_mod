@@ -1,0 +1,47 @@
+{
+  "camellya:BloomingForm": {
+    "NAME": "盛放形态",
+    "DESCRIPTIONS": [
+      "获得 ",
+      " 点力量。"
+    ]
+  },
+  "camellya:WitheringForm": {
+    "NAME": "凋零形态",
+    "DESCRIPTIONS": [
+      "获得 ",
+      " 点敏捷。"
+    ]
+  },
+  "camellya:CamelliaFertilizer": {
+    "NAME": "椿花养料",
+    "DESCRIPTIONS": [
+      "每当场上有敌人死亡时，均可获得 ",
+      " 点护甲和 ",
+      " 点敏捷。"
+    ]
+  },
+  "camellya:BlowAgain": {
+    "NAME": "吹又生",
+    "DESCRIPTIONS": [
+      "某一回合内受到的第一次扣减了生命值的攻击会使自己回复 ",
+      " 点血量和 ",
+      " 点力量。"
+    ]
+  },
+  "camellya:RestAndRecover": {
+    "NAME": "休养恢复",
+    "DESCRIPTIONS": [
+      "在你的回合结束时，回复 ",
+      " 点生命值并获得 ",
+      " 点力量。"
+    ]
+  },
+  "camellya:FertileSoil": {
+    "NAME": "沃土",
+    "DESCRIPTIONS": [
+      "每当有一张牌被消耗时，抽 ",
+      " 张牌。"
+    ]
+  }
+}

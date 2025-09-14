@@ -1,0 +1,226 @@
+{
+  "camellya:Strike": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "camellya:Block": {
+    "NAME": "格挡",
+    "DESCRIPTION": "获得 !B! 点格挡。"
+  },
+  "camellya:FlowerCard": {
+    "NAME": "飞花令",
+    "DESCRIPTION": "对所有敌人造成 5+X 点伤害，并施加 1+X 层 camellya:注毒 。",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 7+2X 点伤害，并施加 2+X 层 camellya:注毒 。"
+  },
+  "camellya:SwitchToBlooming": {
+    "NAME": "盛放形态",
+    "DESCRIPTION": "移除 camellya:凋零形态 。获得 !M! 点 力量 。获得 camellya:盛放形态 。对所有敌人施加1层 虚弱 。"
+  },
+  "camellya:SwitchToWithering": {
+    "NAME": "凋零形态",
+    "DESCRIPTION": "移除 camellya:盛放形态 。获得 !M! 点 敏捷 。获得 camellya:凋零形态 。对所有敌人施加1层 易伤 。"
+  },
+  "camellya:HarryLuWhirlwind": {
+    "NAME": "哈里路大旋风",
+    "DESCRIPTION": "对所有敌人造成 8+X 点伤害。",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 8+2X 点伤害。"
+  },
+  "camellya:LunDa": {
+    "NAME": "抡打",
+    "DESCRIPTION": "对目标敌人造成 6+Y 点伤害。",
+    "UPGRADE_DESCRIPTION": "对目标敌人造成 9+2Y 点伤害。"
+  },
+  "camellya:SharpFlowerBranch": {
+    "NAME": "锐利花枝",
+    "DESCRIPTION": "对目标敌人造成 11+2Y 点伤害。若该回合内未使用过其他攻击牌，则从牌堆中抽取 2 张牌。",
+    "UPGRADE_DESCRIPTION": "对目标敌人造成 14+3Y 点伤害。若该回合内未使用过其他攻击牌，则从牌堆中抽取 2 张牌。"
+  },
+  "camellya:BarbedFlowerBranch": {
+    "NAME": "倒刺花枝",
+    "DESCRIPTION": "对目标敌人造成 8+Y 点伤害。给予其 2 层 虚弱 。",
+    "UPGRADE_DESCRIPTION": "对目标敌人造成 10+2Y 点伤害。给予其 3 层 虚弱 。"
+  },
+  "camellya:RoseSwordsman": {
+    "NAME": "玫瑰剑客",
+    "DESCRIPTION": "快速劈砍目标敌人3次，各造成 3+Y 点伤害，然后从牌堆中抽取 1 张牌。",
+    "UPGRADE_DESCRIPTION": "快速劈砍目标敌人3次，各造成 4+2Y 点伤害，然后从牌堆中抽取 1 张牌。"
+  },
+  "camellya:HuaChao": {
+    "NAME": "花朝",
+    "DESCRIPTION": "对场上随机2名敌人造成 4+X+Y 点伤害，然后获得 !B! 点护甲。",
+    "UPGRADE_DESCRIPTION": "对场上随机2名敌人造成 5+2X+2Y 点伤害，然后获得 !B! 点护甲。"
+  },
+  "camellya:LuoHong": {
+    "NAME": "落红",
+    "DESCRIPTION": "对全场敌人造成 4+2X 点伤害，并获得数值等于造成总伤害一半的护甲（向下取整）。",
+    "UPGRADE_DESCRIPTION": "对全场敌人造成 6+2X 点伤害，并获得数值等于造成总伤害一半的护甲（向下取整）。"
+  },
+  "camellya:LoveFlower": {
+    "NAME": "情花",
+    "DESCRIPTION": "对目标敌人造成 7+2Y 点伤害，并减少其 力量 Y+1 点。",
+    "UPGRADE_DESCRIPTION": "对目标敌人造成 7+3Y 点伤害，并减少其 力量 Y+2 点。"
+  },
+  "camellya:WillowWhip": {
+    "NAME": "柳枝长鞭",
+    "DESCRIPTION": "挥舞长鞭3次，每次对全场敌人造成 !D! 点伤害，然后将1张手牌放入废牌堆。",
+    "UPGRADE_DESCRIPTION": "挥舞长鞭3次，每次对全场敌人造成 !D! 点伤害，然后将1张手牌放入废牌堆。"
+  },
+  "camellya:SuffocatingVine": {
+    "NAME": "窒息花藤",
+    "DESCRIPTION": "对目标敌人造成 8+2Y 点伤害，并施加 1+Y 点 窒息 ",
+    "UPGRADE_DESCRIPTION": "对目标敌人造成 11+3Y 点伤害，并施加 2+2Y 点 窒息"
+  },
+  "camellya:BloodsuckingVine": {
+    "NAME": "吸血花藤",
+    "DESCRIPTION": " 虚无 。对全场敌人造成 8+X 点伤害，并将造成未被格挡的伤害的20%用于回复自己的生命值。",
+    "UPGRADE_DESCRIPTION": " 虚无 。对全场敌人造成 10+2X 点伤害，并将造成未被格挡的伤害的30%用于回复自己的生命值。"
+  },
+  "camellya:BarricadeVine": {
+    "NAME": "壁垒花藤",
+    "DESCRIPTION": "对目标敌人造成 12+2X+2Y 点伤害，并获得 3+X+2Y 点护甲。",
+    "UPGRADE_DESCRIPTION": "对目标敌人造成 16+2X+2Y 点伤害，并获得 5+2X+3Y 点护甲。"
+  },
+  "camellya:FallenCamellia": {
+    "NAME": "落椿",
+    "DESCRIPTION": "击碎一名敌人的全部护甲，然后对该敌人造成 12+2Y 点伤害。",
+    "UPGRADE_DESCRIPTION": "击碎一名敌人的全部护甲，然后对该敌人造成 18+3Y 点伤害。"
+  },
+  "camellya:OleanderBranch": {
+    "NAME": "夹竹桃枝",
+    "DESCRIPTION": "使用夹竹桃枝戳刺目标敌人，对敌人造成 12+2Y 点伤害，并施加 3 回合 易伤 和 3 回合 虚弱 。",
+    "UPGRADE_DESCRIPTION": "使用夹竹桃枝戳刺目标敌人，对敌人造成 15+3Y 点伤害，并施加 4 回合 易伤 和 4 回合 虚弱 。"
+  },
+  "camellya:ReedAutumn": {
+    "NAME": "芦荻秋色",
+    "DESCRIPTION": "以萧瑟秋风席卷一名敌人，对其造成 11+2Y 点伤害，同时使其获得 3 点 camellya:注毒",
+    "UPGRADE_DESCRIPTION": "以萧瑟秋风席卷一名敌人，对其造成 14+3Y 点伤害，同时使其获得 3 点 camellya:注毒"
+  },
+  "camellya:FallenLeaves": {
+    "NAME": "败叶随水",
+    "DESCRIPTION": "对全场敌人造成 28+3X+2Y 点伤害和 2 回合 易伤 效果。",
+    "UPGRADE_DESCRIPTION": "对全场敌人造成 32+4X+3Y 点伤害和 3 回合 易伤 效果。"
+  },
+  "camellya:OneDayFlower": {
+    "NAME": "一日花",
+    "DESCRIPTION": " 消耗 。对所有敌人造成 48 + 3X 点伤害。获得 4 点 力量 。",
+    "UPGRADE_DESCRIPTION": " 消耗 。对所有敌人造成 57 + 4X 点伤害。获得 6 点 力量 。"
+  },
+  "camellya:BloomingAshes": {
+    "NAME": "芳华绽烬",
+    "DESCRIPTION": " 消耗 。对所有敌人造成 24+2X 点伤害，施加 Y+2 回合 虚弱 、Y+2 回合 易伤 和 4 点 camellya:注毒 。",
+    "UPGRADE_DESCRIPTION": " 消耗 。对所有敌人造成 28+3X 点伤害，施加 Y+2 回合 虚弱 、Y+2 回合 易伤 和 4 点 camellya:注毒 。"
+  },
+  "camellya:ColdResistant": {
+    "NAME": "耐寒",
+    "DESCRIPTION": "获得1层 人工制品 。增加1点 力量 。",
+    "UPGRADE_DESCRIPTION": "获得1层 人工制品 。增加2点 力量 。"
+  },
+  "camellya:HeatRelief": {
+    "NAME": "解暑",
+    "DESCRIPTION": "回复10点生命值并获得10点格挡。 消耗 。"
+  },
+  "camellya:ThornDense": {
+    "NAME": "荆棘密布",
+    "DESCRIPTION": "获得9点格挡。获得3层 荆棘 。",
+    "UPGRADE_DESCRIPTION": "获得12点格挡。获得5层 荆棘 。"
+  },
+  "camellya:SpringBirth": {
+    "NAME": "春生",
+    "DESCRIPTION": "回复 6 点生命值，增加 2 点 敏捷 。",
+    "UPGRADE_DESCRIPTION": "回复 9 点生命值，增加 4 点 敏捷 。"
+  },
+  "camellya:SummerGrowth": {
+    "NAME": "夏长",
+    "DESCRIPTION": "获得 2 点 力量 。",
+    "UPGRADE_DESCRIPTION": "获得 4 点 力量 。"
+  },
+  "camellya:AutumnHarvest": {
+    "NAME": "秋收",
+    "DESCRIPTION": "对所有敌人施加 3 层 虚弱 和 3 层 易伤 。 消耗 。",
+    "UPGRADE_DESCRIPTION": "对所有敌人施加 3 层 虚弱 和 3 层 易伤 。 消耗 。费用变为 0 。"
+  },
+  "camellya:WinterStorage": {
+    "NAME": "冬藏",
+    "DESCRIPTION": "使自己以初始攻击反击敌人之后 2 次攻击。",
+    "UPGRADE_DESCRIPTION": "使自己以初始攻击反击敌人之后 3 次攻击。"
+  },
+  "camellya:Redemption": {
+    "NAME": "偿赎",
+    "DESCRIPTION": "下一回合获得 2 点能量。",
+    "UPGRADE_DESCRIPTION": "下一回合获得 3 点能量。"
+  },
+  "camellya:BloomingWitheringWaltz": {
+    "NAME": "盛放与凋零的轮舞",
+    "DESCRIPTION": "增加 2 点 力量 和 2 点 敏捷 。",
+    "UPGRADE_DESCRIPTION": "增加 2 点 力量 和 2 点 敏捷 。"
+  },
+  "camellya:BotanicalCosmos": {
+    "NAME": "植物性宇宙",
+    "DESCRIPTION": " 虚无 。获得 12 点格挡，并增加 1 点 敏捷 。",
+    "UPGRADE_DESCRIPTION": "获得 12 点格挡，并增加 1 点 敏捷 。"
+  },
+  "camellya:SoundSleep": {
+    "NAME": "酣梦",
+    "DESCRIPTION": "获得 1 点能量值，并抽取 2 张牌。",
+    "UPGRADE_DESCRIPTION": "获得 2 点能量值，并抽取 3 张牌。"
+  },
+  "camellya:FlowerSecret": {
+    "NAME": "花密",
+    "DESCRIPTION": "消耗。获得 2 点 敏捷 ，丢弃1张牌，然后抽取 3 张牌。",
+    "UPGRADE_DESCRIPTION": "消耗。获得 3 点 敏捷 ，丢弃1张牌，然后抽取 4 张牌。"
+  },
+  "camellya:SpringBeauty": {
+    "NAME": "春妍",
+    "DESCRIPTION": "增加自己 2 点 力量 和 2 点 敏捷 ，并获得 4 层 多层护甲 。",
+    "UPGRADE_DESCRIPTION": "增加自己 4 点 力量 和 4 点 敏捷 ，并获得 5 层 多层护甲 。"
+  },
+  "camellya:SpringHeart": {
+    "NAME": "春心",
+    "DESCRIPTION": "立即恢复1张被消耗的牌，并使其费用在本回合内变成0。",
+    "UPGRADE_DESCRIPTION": "立即恢复1张被消耗的牌，并使其费用在本回合内变成0。"
+  },
+  "camellya:ShoreKeeperBlessing": {
+    "NAME": "守岸的庇佑",
+    "DESCRIPTION": "获得 1 层 缓冲 。",
+    "UPGRADE_DESCRIPTION": "获得 1 层 缓冲 。"
+  },
+  "camellya:RestAndRecover": {
+    "NAME": "休养生息",
+    "DESCRIPTION": "使自己在回合结束时回复 2 点血量和 1 点力量。",
+    "UPGRADE_DESCRIPTION": "使自己在回合结束时回复 3 点血量和 1 点力量。"
+  },
+  "camellya:FertileSoil": {
+    "NAME": "肥沃土壤",
+    "DESCRIPTION": "任何一张手牌被消耗时，立即抽取 1 张卡牌。",
+    "UPGRADE_DESCRIPTION": "任何一张手牌被消耗时，立即抽取 2 张卡牌。"
+  },
+  "camellya:Photosynthesis": {
+    "NAME": "光合作用",
+    "DESCRIPTION": "打出后，本场战斗中以后的回合能量值上限增加 1 点。",
+    "UPGRADE_DESCRIPTION": "打出后，本场战斗中以后的回合能量值上限增加 1 点。"
+  },
+  "camellya:CamelliaFertilizer": {
+    "NAME": "椿花养料",
+    "DESCRIPTION": "每当场上有敌人死亡时，均可获得6点护甲和1点 敏捷 。",
+    "UPGRADE_DESCRIPTION": "每当场上有敌人死亡时，均可获得8点护甲和2点 敏捷 。"
+  },
+  "camellya:BlowAgain": {
+    "NAME": "吹又生",
+    "DESCRIPTION": "某一回合内受到的第一次扣减了生命值的攻击会使自己回复4点血量和1点力量。",
+    "UPGRADE_DESCRIPTION": "某一回合内受到的第一次扣减了生命值的攻击会使自己回复6点血量和2点力量。 "
+  },
+  "camellya:BeyondWithering": {
+    "NAME": "超越枯荣",
+    "DESCRIPTION": "使用之后，回合结束格挡不会消失。",
+    "UPGRADE_DESCRIPTION": "使用之后，回合结束格挡不会消失。"
+  },
+  "camellya:WitheringForm": {
+    "NAME": "凋零形态",
+    "DESCRIPTION": "获得 #b%d 点 敏捷 。"
+  },
+  "camellya:BloomingForm": {
+    "NAME": "盛放形态",
+    "DESCRIPTION": "获得 #b%d 点 力量 。"
+  }
+}

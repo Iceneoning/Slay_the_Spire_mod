@@ -2,8 +2,8 @@
   "modid": "ForMyDearLover",
   "name": "GanYu",
   "author_list": ["ganyudedog","Zicheng Lin","Songjie Guan","Binyang Ye","Yijian Cui"],
-  "description": "作为测试的mod。",
-  "version": "0.0.1",
+  "description": "实训做的，是我喜欢的角色！不过也是第一次做，有很多不足之处，请多包涵！",
+  "version": "0.8.0",
   "sts_version": "12-22-2020",
   "mts_version": "3.23.2",
   "dependencies": ["basemod"]

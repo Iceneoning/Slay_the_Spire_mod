@@ -24,6 +24,9 @@ public class ChargePower extends AbstractPower {
     // 每层蓄力提供的基础力量值（固定值，不应被其他Power修改）
     private static final int BASE_STRENGTH_PER_CHARGE = 6;
 
+    // 防止重复排队消费动作的标志
+    private boolean consumeQueued = false;
+
     public ChargePower(AbstractCreature owner, int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
@@ -41,6 +44,7 @@ public class ChargePower extends AbstractPower {
     @Override
     public void onInitialApplication() {
         // 当这个Power实例真正被添加到生物身上时才应用力量和触发获得效果
+        System.out.println("[DEBUG] ChargePower.onInitialApplication: amount=" + this.amount + ", owner=" + (this.owner != null ? this.owner.name : "null"));
         updateStrength(0, this.amount);
         updateDescription();
         triggerChargeGained(this.amount);
@@ -49,16 +53,20 @@ public class ChargePower extends AbstractPower {
     @Override
     public void stackPower(int stackAmount) {
         int oldAmount = this.amount;
-        this.amount += stackAmount;
-
-        if (this.amount > 2) {
-            this.amount = 2; // 蓄力上限为2
+        int newAmount = this.amount + stackAmount;
+        if (newAmount > 2) {
+            newAmount = 2; // 蓄力上限为2
         }
-        
+        int actualGain = newAmount - oldAmount;
+        this.amount = newAmount;
+
         // 更新力量值，只应用变化量
+        System.out.println("[DEBUG] ChargePower.stackPower: oldAmount=" + oldAmount + ", newAmount=" + this.amount + ", actualGain=" + actualGain);
         updateStrength(oldAmount, this.amount);
-        // 触发获得蓄力的效果
-        triggerChargeGained(stackAmount);
+        // 仅当实际增加时才触发获得蓄力的效果
+        if (actualGain > 0) {
+            triggerChargeGained(actualGain);
+        }
         updateDescription();
     }
 
@@ -77,28 +85,22 @@ public class ChargePower extends AbstractPower {
         
         // 只有当力量值发生变化时才应用变化
         if (strengthDiff != 0) {
-            addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, strengthDiff), strengthDiff));
+            System.out.println("[DEBUG] ChargePower.updateStrength: oldAmount=" + oldAmount + ", newAmount=" + newAmount + ", strengthDiff=" + strengthDiff + ", owner=" + (this.owner != null ? this.owner.name : "null"));
+            // 立即将力量应用到目标上，使用 addToTop 以确保在随后立即发生的动作（例如本回合的伤害）之前生效
+            System.out.println("[DEBUG] ChargePower.updateStrength: queueing ApplyPowerAction(Strength " + strengthDiff + ") via addToTop");
+            addToTop(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, strengthDiff), strengthDiff));
         }
     }
     
     public void onAttackPlay() {
         // 打出攻击牌时移除所有蓄力（只要有蓄力就消耗）
         if (this.amount > 0) {
-            int consumedAmount = this.amount;
-            this.amount = 0;
-            // 使用异步操作避免ConcurrentModificationException
-            addToBot(new com.megacrit.cardcrawl.actions.AbstractGameAction() {
-                @Override
-                public void update() {
-                    // 移除蓄力提供的力量 (每层蓄力提供6点力量)
-                    addToBot(new ApplyPowerAction(ChargePower.this.owner, ChargePower.this.owner, 
-                        new StrengthPower(ChargePower.this.owner, -consumedAmount * BASE_STRENGTH_PER_CHARGE), -consumedAmount * BASE_STRENGTH_PER_CHARGE));
-                    updateDescription();
-                    // 触发相关Power效果
-                    triggerPowersOnConsumed(consumedAmount);
-                    this.isDone = true;
-                }
-            });
+            // 将消费动作加入队列（如果未排队）
+            if (!this.consumeQueued) {
+                System.out.println("[DEBUG] ChargePower.onAttackPlay: queuing consume action. current amount=" + this.amount + ", owner=" + (this.owner != null ? this.owner.name : "null"));
+                this.consumeQueued = true;
+                addToBot(getConsumeAction());
+            }
         }
     }
     
@@ -121,21 +123,38 @@ public class ChargePower extends AbstractPower {
     public int onLoseHp(int damageAmount) {
         // 生命值损失时移除所有蓄力
         if (this.amount > 0 && damageAmount > 0) {
-            // 使用addToBot避免ConcurrentModificationException
-            addToBot(new com.megacrit.cardcrawl.actions.AbstractGameAction() {
-                @Override
-                public void update() {
-                    int consumedAmount = ChargePower.this.amount;
-                    ChargePower.this.amount = 0;
-                    addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, -consumedAmount * BASE_STRENGTH_PER_CHARGE), -consumedAmount * BASE_STRENGTH_PER_CHARGE));
-                    updateDescription();
-                    // 触发相关Power效果
-                    triggerPowersOnConsumed(consumedAmount);
-                    this.isDone = true;
-                }
-            });
+            if (!this.consumeQueued) {
+                System.out.println("[DEBUG] ChargePower.onLoseHp: queuing consume action due to losing hp. damageAmount=" + damageAmount + ", current amount=" + this.amount);
+                this.consumeQueued = true;
+                addToBot(getConsumeAction());
+            }
         }
         return damageAmount;
+    }
+
+    // 返回一个消费蓄力的动作（一次性消费当前所有层数）
+    public com.megacrit.cardcrawl.actions.AbstractGameAction getConsumeAction() {
+        return new com.megacrit.cardcrawl.actions.AbstractGameAction() {
+            @Override
+            public void update() {
+                // 在执行动作时读取当前的蓄力层数
+                final int consumedAmount = ChargePower.this.amount;
+                // 在执行动作时再清零
+                ChargePower.this.amount = 0;
+        // 移除蓄力提供的力量
+        System.out.println("[DEBUG] ChargePower.getConsumeAction: executing consume. consumedAmount=" + consumedAmount + ", removing strength=" + (-consumedAmount * BASE_STRENGTH_PER_CHARGE) + ", owner=" + (ChargePower.this.owner != null ? ChargePower.this.owner.name : "null"));
+        System.out.println("[DEBUG] ChargePower.getConsumeAction: queueing ApplyPowerAction(Strength " + (-consumedAmount * BASE_STRENGTH_PER_CHARGE) + ") via addToBot");
+        addToBot(new ApplyPowerAction(ChargePower.this.owner, ChargePower.this.owner,
+            new StrengthPower(ChargePower.this.owner, -consumedAmount * BASE_STRENGTH_PER_CHARGE), -consumedAmount * BASE_STRENGTH_PER_CHARGE));
+        // 先移除自身Power，确保后续由其他Power（如 EndPower）加入的新 ChargePower 不会被立即删除
+        addToBot(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(ChargePower.this.owner, ChargePower.this.owner, ChargePower.this.ID));
+        updateDescription();
+        // 触发相关Power效果（此时已有移除动作排在队列中，后续由 EndPower 队列加入的添加动作会在移除动作之后执行）
+        triggerPowersOnConsumed(consumedAmount);
+                ChargePower.this.consumeQueued = false;
+                this.isDone = true;
+            }
+        };
     }
     
     private void triggerPowersOnConsumed(int consumedAmount) {
@@ -170,6 +189,17 @@ public class ChargePower extends AbstractPower {
                 // 如果方法不存在或调用失败，忽略错误
             }
         }
+
+        // 触发PrayPower效果
+        if (this.owner.hasPower("Gan_Yu:PrayPower")) {
+            AbstractPower prayPower = this.owner.getPower("Gan_Yu:PrayPower");
+            try {
+                prayPower.getClass().getMethod("onChargeConsumed", int.class).invoke(prayPower, consumedAmount);
+            } catch (Exception e) {
+                // 如果方法不存在或调用失败，忽略错误
+            }
+        }
+
         if (this.owner.hasPower("Gan_Yu:EndPower")) {
             AbstractPower endPower = this.owner.getPower("Gan_Yu:EndPower");
             try {
@@ -197,12 +227,11 @@ public class ChargePower extends AbstractPower {
                             {
                                 this.name = "蓄力消耗标记";
                                 this.ID = CONSUMED_MARKER_ID;
+                                this.description = CardCrawlGame.languagePack.getPowerStrings(CONSUMED_MARKER_ID).DESCRIPTIONS[0];
                                 this.owner = ChargePower.this.owner;
-                                // 设置必要的纹理属性以避免空指针异常
                                 try {
                                     this.img = new Texture("GanYu/img/powers/LoseChargePower.png");
                                 } catch (Exception e) {
-                                    // 如果纹理加载失败，使用默认的空纹理
                                     this.img = new Texture("images/powers/32/ritual.png");
                                 }
                                 this.type = PowerType.BUFF;
@@ -210,17 +239,20 @@ public class ChargePower extends AbstractPower {
 
                             @Override
                             public void updateDescription() {
-                                this.description = "本回合已消耗蓄力";
+                                this.description = CardCrawlGame.languagePack.getPowerStrings(CONSUMED_MARKER_ID).DESCRIPTIONS[0];
                             }
 
                             @Override
                             public void atEndOfTurn(boolean isPlayer) {
-                                // 回合结束时移除标记
                                 if (isPlayer) {
-                                    // 使用addToBot避免在遍历powers时直接修改列表
-                                    addToBot(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(
-                                            this.owner, this.owner, this));
+                                    addToBot(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, this));
                                 }
+                            }
+
+                            @Override
+                            public void atStartOfTurn() {
+                                // 也在回合开始移除，防止在非玩家回合被消耗后残留
+                                addToBot(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, this));
                             }
                         };
                         ChargePower.this.owner.powers.add(marker);

@@ -41,6 +41,9 @@ public class PermUpgradeCardAction extends AbstractGameAction {
             // 只有一张可升级卡牌时直接升级
             if (upgradableCards.size() == 1) {
                 AbstractCard toUpgrade = upgradableCards.get(0);
+                // 先在masterDeck中永久升级对应卡牌
+                upgradeMasterCard(toUpgrade);
+                // 再升级当前战斗中的卡牌实例以同步显示
                 toUpgrade.upgrade();
                 toUpgrade.applyPowers();
                 toUpgrade.superFlash();
@@ -57,6 +60,9 @@ public class PermUpgradeCardAction extends AbstractGameAction {
         // 处理玩家选择的卡牌
         if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
             for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
+                // 永久升级masterDeck中的对应卡
+                upgradeMasterCard(c);
+                // 升级当前战斗中的卡牌实例
                 c.upgrade();
                 c.applyPowers();
                 c.superFlash();
@@ -69,5 +75,16 @@ public class PermUpgradeCardAction extends AbstractGameAction {
         }
         
         tickDuration();
+    }
+
+    // 在玩家的 masterDeck 中找到同名且可升级的卡并永久升级
+    private void upgradeMasterCard(AbstractCard card) {
+        for (AbstractCard masterCard : AbstractDungeon.player.masterDeck.group) {
+            if (masterCard.cardID.equals(card.cardID) && masterCard.canUpgrade()) {
+                masterCard.upgrade();
+                // 如果需要，你可以在这里保存或者记录信息
+                break;
+            }
+        }
     }
 }

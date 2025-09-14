@@ -25,11 +25,19 @@ public class GoAllOutPower extends AbstractPower {
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0];
+        this.description = DESCRIPTIONS[0] +amount+DESCRIPTIONS[1] ;
     }
 
     public void onChargeConsumed(int amount) {
         // 当蓄力被消耗时调用，无论消耗多少层都只获得1点能量
-        addToBot(new GainEnergyAction(1));
+        // 改为按自身堆叠数触发：this.amount 表示要获得的能量数（可被 stackPower 增加）
+        addToBot(new GainEnergyAction(this.amount));
+    }
+
+    @Override
+    public void stackPower(int stackAmount) {
+        this.amount += stackAmount;
+        if (this.amount < 0) this.amount = 0;
+        updateDescription();
     }
 }

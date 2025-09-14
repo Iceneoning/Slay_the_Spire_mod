@@ -33,13 +33,11 @@ public class WorkOverTimeRelic extends CustomRelic {
         return new WorkOverTimeRelic();
     }
     @Override
-    public void atBattleStart() {
-        super.atBattleStart();
-        // 闪光提示并在回合开始时给予1层蓄力
+    public void atTurnStart() {
+        super.atTurnStart();
+        // 每回合开始时闪光、获得1点能量，并在抽牌堆中加入1张眩晕
         this.flash();
-        // 每回合开始时，获得1点能量
         this.addToBot(new GainEnergyAction(1));
-        // 每回合开始时，往抽牌堆中加入1张眩晕（Dazed）并洗入抽牌堆
         this.addToBot(new MakeTempCardInDrawPileAction(new Dazed(), 1, true, true));
     }
 }

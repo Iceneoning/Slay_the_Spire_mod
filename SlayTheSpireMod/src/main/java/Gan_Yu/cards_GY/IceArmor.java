@@ -47,8 +47,24 @@ public class IceArmor extends CustomCard {
             (AbstractGameAction) new GainBlockAction((AbstractCreature) p, (AbstractCreature) p, this.block));
         
         // 应用冰甲能力
-        AbstractDungeon.actionManager.addToBottom(
-            new ApplyPowerAction(p, p, new IceArmorPower(p, this.magicNumber), this.magicNumber));
+        if (p.hasPower(IceArmorPower.POWER_ID)) {
+            final int add = this.magicNumber;
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.AbstractGameAction() {
+                @Override
+                public void update() {
+                    com.megacrit.cardcrawl.powers.AbstractPower ap = p.getPower(IceArmorPower.POWER_ID);
+                    if (ap instanceof Gan_Yu.power_GY.IceArmorPower) {
+                        ((Gan_Yu.power_GY.IceArmorPower) ap).addWeakAndStack(add);
+                    } else {
+                        addToTop(new ApplyPowerAction(p, p, new IceArmorPower(p, add), add));
+                    }
+                    this.isDone = true;
+                }
+            });
+        } else {
+            AbstractDungeon.actionManager.addToBottom(
+                new ApplyPowerAction(p, p, new IceArmorPower(p, this.magicNumber), this.magicNumber));
+        }
     }
 
     @Override

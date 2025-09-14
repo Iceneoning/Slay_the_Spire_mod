@@ -45,26 +45,36 @@ public class EndPower extends AbstractPower {
     
     // 每当需要维持蓄力时调用此方法
     private void maintainCharge() {
-        // 直接操作powers列表来确保完全移除并重新创建
-        if (this.owner.hasPower(ModHelper.makePath("ChargePower"))) {
-            // 先移除现有的蓄力
-            AbstractDungeon.actionManager.addToBottom(
-                new RemoveSpecificPowerAction(this.owner, this.owner, ModHelper.makePath("ChargePower")));
-            
-            // 在移除之后，确保创建全新的蓄力实例
+        // 检查当前是否已有 ChargePower，并只在层数不同时应用差值
+        String cpId = ModHelper.makePath("ChargePower");
+        if (this.owner.hasPower(cpId)) {
+            AbstractPower cp = this.owner.getPower(cpId);
+            int current = cp.amount;
+            int delta = this.chargeAmount - current;
+            if (delta == 0) {
+                // 已经是期望的层数，不做任何处理，避免重复应用力量
+                return;
+            }
+            // 只应用差值（正数则增加层数，负数则减少层数），由 ChargePower.stackPower 处理力量差异
+            System.out.println("[DEBUG] EndPower.maintainCharge: current=" + current + ", target=" + this.chargeAmount + ", delta=" + delta);
+            // 调用已有 ChargePower 的 stackPower，而不是创建新的 ChargePower 实例，避免触发 onInitialApplication 导致重复 updateStrength
             AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.AbstractGameAction() {
                 @Override
                 public void update() {
-                    // 检查是否还有蓄力power，如果没有则添加新的
-                    if (!owner.hasPower(ModHelper.makePath("ChargePower"))) {
+                    AbstractPower existing = EndPower.this.owner.getPower(cpId);
+                    if (existing instanceof Gan_Yu.power_GY.ChargePower) {
+                        ((Gan_Yu.power_GY.ChargePower) existing).stackPower(delta);
+                    } else {
+                        // 若意外不存在，则退回为直接添加
                         AbstractDungeon.actionManager.addToBottom(
-                            new ApplyPowerAction(owner, owner, new ChargePower(owner, chargeAmount), chargeAmount));
+                            new ApplyPowerAction(EndPower.this.owner, EndPower.this.owner, new ChargePower(EndPower.this.owner, delta), delta));
                     }
                     this.isDone = true;
                 }
             });
         } else {
-            // 如果没有蓄力，直接添加
+            // 如果没有蓄力，直接添加指定层数
+            System.out.println("[DEBUG] EndPower.maintainCharge: no existing ChargePower, applying " + this.chargeAmount + " layers");
             AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(this.owner, this.owner, new ChargePower(this.owner, this.chargeAmount), this.chargeAmount));
         }

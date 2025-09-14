@@ -33,8 +33,25 @@ public class Handy extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(
-            new ApplyPowerAction(p, p, new HandyPower(p, this.magicNumber), 1));
+        if (p.hasPower(HandyPower.POWER_ID)) {
+            // 如果已有 HandyPower，则合并新卡的 strength 到现有 power
+            final int add = this.magicNumber;
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.AbstractGameAction() {
+                @Override
+                public void update() {
+                    com.megacrit.cardcrawl.powers.AbstractPower ap = p.getPower(HandyPower.POWER_ID);
+                    if (ap instanceof Gan_Yu.power_GY.HandyPower) {
+                        ((Gan_Yu.power_GY.HandyPower) ap).addStrengthAndStack(add);
+                    } else {
+                        addToTop(new ApplyPowerAction(p, p, new HandyPower(p, add), 1));
+                    }
+                    this.isDone = true;
+                }
+            });
+        } else {
+            AbstractDungeon.actionManager.addToBottom(
+                new ApplyPowerAction(p, p, new HandyPower(p, this.magicNumber), 1));
+        }
     }
 
     @Override

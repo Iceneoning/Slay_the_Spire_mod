@@ -1,0 +1,23 @@
+{
+  "camellya:MyRelic": {
+    "NAME": "频谱手链",
+    "FLAVOR": "椿花的神秘力量在战斗中逐渐显现",
+    "DESCRIPTIONS": [
+      "在奇数回合开始时，获得 #b1 点 力量 。在偶数回合开始时，获得 #b1 点 敏捷 。上限为 5 点。"
+    ]
+  },
+  "camellya:CamelliaFlower": {
+    "NAME": "一朵椿花",
+    "FLAVOR": "永不凋零，力量循环往复",
+    "DESCRIPTIONS": [
+      "盛放形态和凋零形态现在分别提供 #b2 点 力量 和 敏捷 ，而非 #b1 点。"
+    ]
+  },
+  "camellya:WoodenDoll": {
+    "NAME": "木雕玩偶",
+    "FLAVOR": "手工雕刻的玩偶，似乎蕴含着生命力",
+    "DESCRIPTIONS": [
+      "每回合开始时，给予4点格挡"
+    ]
+  }
+}

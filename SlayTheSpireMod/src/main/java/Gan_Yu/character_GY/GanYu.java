@@ -19,7 +19,9 @@ import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbInterface;
 
+import Gan_Yu.cards_GY.Cheer;
 import Gan_Yu.cards_GY.Defend;
+import Gan_Yu.cards_GY.IceAttack;
 import Gan_Yu.cards_GY.Strike;
 import Gan_Yu.modcore_GY.Gan_Yu;
 import Gan_Yu.relics_GY.AMoze;
@@ -90,12 +92,14 @@ public class GanYu extends CustomPlayer {
     // 初始卡组的ID，可直接写或引用变量
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
-        for (int x = 0; x < 5; x++) {
+        for (int x = 0; x < 4; x++) {
             retVal.add(Strike.ID);
         }
-        for (int x = 0; x < 5; x++) {
+        for (int x = 0; x < 4; x++) {
             retVal.add(Defend.ID);
         }
+        retVal.add(Cheer.ID);
+        retVal.add(IceAttack.ID);
         return retVal;
     }
 

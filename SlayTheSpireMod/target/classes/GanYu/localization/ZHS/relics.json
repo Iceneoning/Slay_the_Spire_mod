@@ -10,7 +10,7 @@
     "NAME": "麒麟之弓",
     "FLAVOR": "阿莫斯的进化，更加符合麒麟传人的使用",
     "DESCRIPTIONS": [
-      "替换 #y阿莫斯之弓 ，每打出1张非攻击牌，获得 #b1 层 #yganyu:蓄力 "
+      "替换 #y阿莫斯之弓 ,每打出1张非攻击牌,获得 #b1 层 #yganyu:蓄力 ,每回合只能通过这种方式获得 #b4 层"
     ]
   },
   "Gan_Yu:WorkOverTimeRelic": {

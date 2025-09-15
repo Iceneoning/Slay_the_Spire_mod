@@ -40,7 +40,7 @@ public class HuaChao extends CustomCard {
                 CardRarity.COMMON, CardTarget.ALL_ENEMY);
         this.baseDamage = BASE_DAMAGE;
         this.baseBlock = BASE_BLOCK;
-        this.exhaust = true; // 消耗品
+      
     }
 
     @Override

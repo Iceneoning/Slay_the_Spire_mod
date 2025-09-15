@@ -1,0 +1,44 @@
+[
+  {
+    "NAMES": [
+      "blooming form"
+    ],
+    "DESCRIPTION": "Gain #b%d Strength."
+  },
+  {
+    "NAMES": [
+      "withering form"
+    ],
+    "DESCRIPTION": "Gain #b%d Dexterity."
+  },
+  {
+    "NAMES": [
+      "camellia fertilizer"
+    ],
+    "DESCRIPTION": "Whenever an enemy dies, gain #b%d Block and #b%d Dexterity."
+  },
+  {
+    "NAMES": [
+      "blow again"
+    ],
+    "DESCRIPTION": "The first time you take damage each turn, heal #b%d HP and gain #b%d Strength."
+  },
+  {
+    "NAMES": [
+      "rest and recover"
+    ],
+    "DESCRIPTION": "At the end of your turn, heal #b%d HP and gain #b%d Strength."
+  },
+  {
+    "NAMES": [
+      "fertile soil"
+    ],
+    "DESCRIPTION": "Draw #b%d card whenever a card is exhausted."
+  },
+  {
+    "NAMES": [
+      "poisoned"
+    ],
+    "DESCRIPTION": "At the start of each turn, lose #b%d HP, then reduce Poisoned by #b1 stack."
+  }
+]

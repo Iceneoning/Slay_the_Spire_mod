@@ -43,5 +43,12 @@
       "每当有一张牌被消耗时，抽 ",
       " 张牌。"
     ]
+  },
+  "camellya:Photosynthesis": {
+    "NAME": "光合作用",
+    "DESCRIPTIONS": [
+      "每回合开始时获得 ",
+      " 点能量。"
+    ]
   }
 }

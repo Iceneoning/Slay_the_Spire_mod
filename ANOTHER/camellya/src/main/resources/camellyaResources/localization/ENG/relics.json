@@ -1,0 +1,23 @@
+{
+  "camellya:MyRelic": {
+    "NAME": "Spectrum Bracelet",
+    "FLAVOR": "The mysterious power of camellia flowers gradually manifests in battle",
+    "DESCRIPTIONS": [
+      "At the start of odd-numbered turns, gain #b1 Strength. At the start of even-numbered turns, gain #b1 Dexterity. Cap at 5 points."
+    ]
+  },
+  "camellya:CamelliaFlower": {
+    "NAME": "A Camellia Flower",
+    "FLAVOR": "Never withering, power cycles endlessly",
+    "DESCRIPTIONS": [
+      "Blooming Form and Withering Form now provide #b2 Strength and Dexterity respectively, instead of #b1."
+    ]
+  },
+  "camellya:WoodenDoll": {
+    "NAME": "Wooden Doll",
+    "FLAVOR": "Hand-carved doll that seems to contain life force",
+    "DESCRIPTIONS": [
+      "At the start of each turn, gain 4 Block"
+    ]
+  }
+}

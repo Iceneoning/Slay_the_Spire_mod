@@ -152,7 +152,7 @@ public class came_llya implements EditCardsSubscriber, EditStringsSubscriber, Ed
     public void receiveEditRelics() {
         // 将遗物添加到自定义颜色池中，使其成为角色独有遗物
         BaseMod.addRelicToCustomPool(new MyRelic(), CAMELLYA_GREEN);
-        BaseMod.addRelic(new CamelliaFlower(), RelicType.SHARED);
+        BaseMod.addRelicToCustomPool(new CamelliaFlower(), CAMELLYA_GREEN);
          // 添加木雕玩偶遗物
         BaseMod.addRelicToCustomPool(new WoodenDoll(), CAMELLYA_GREEN);
   
@@ -161,12 +161,12 @@ public class came_llya implements EditCardsSubscriber, EditStringsSubscriber, Ed
     @Override
     public void receiveEditKeywords() {
         Gson gson = new Gson();
-        String lang = "eng";
+        String lang = "ENG";
         if (language == Settings.GameLanguage.ZHS) {
-            lang = "zhs";
+            lang = "ZHS";
         }
 
-        String json = Gdx.files.internal("camellyaResources/localization/ZHS/Keywords_" + lang + ".json")
+        String json = Gdx.files.internal("camellyaResources/localization/" + lang + "/Keywords.json")
                 .readString(String.valueOf(StandardCharsets.UTF_8));
         Keyword[] keywords = gson.fromJson(json, Keyword[].class);
         if (keywords != null) {

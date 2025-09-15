@@ -1,0 +1,54 @@
+{
+  "camellya:BloomingForm": {
+    "NAME": "Blooming Form",
+    "DESCRIPTIONS": [
+      "Gain ",
+      " Strength."
+    ]
+  },
+  "camellya:WitheringForm": {
+    "NAME": "Withering Form",
+    "DESCRIPTIONS": [
+      "Gain ",
+      " Dexterity."
+    ]
+  },
+  "camellya:CamelliaFertilizer": {
+    "NAME": "Camellia Fertilizer",
+    "DESCRIPTIONS": [
+      "Whenever an enemy dies, gain ",
+      " Block and ",
+      " Dexterity."
+    ]
+  },
+  "camellya:BlowAgain": {
+    "NAME": "Blow Again",
+    "DESCRIPTIONS": [
+      "The first attack that deals damage to you each turn heals you for ",
+      " HP and gives you ",
+      " Strength."
+    ]
+  },
+  "camellya:RestAndRecover": {
+    "NAME": "Rest and Recover",
+    "DESCRIPTIONS": [
+      "At the end of your turn, heal ",
+      " HP and gain ",
+      " Strength."
+    ]
+  },
+  "camellya:FertileSoil": {
+    "NAME": "Fertile Soil",
+    "DESCRIPTIONS": [
+      "Draw ",
+      " card whenever a card is exhausted."
+    ]
+  },
+  "camellya:Photosynthesis": {
+    "NAME": "Photosynthesis",
+    "DESCRIPTIONS": [
+      "Gain ",
+      " energy at the start of each turn."
+    ]
+  }
+}

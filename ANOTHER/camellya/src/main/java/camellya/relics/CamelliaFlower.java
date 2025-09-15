@@ -1,11 +1,14 @@
+// ... existing code ...
 package camellya.relics;
 
 import basemod.abstracts.CustomRelic;
 import camellya.helpers.ModHelper;
+import camellya.characters.MyCharacter;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 
 // 一朵椿花遗物类
 public class CamelliaFlower extends CustomRelic {
@@ -25,6 +28,13 @@ public class CamelliaFlower extends CustomRelic {
     // 获取遗物描述
     public String getUpdatedDescription() {
         return this.DESCRIPTIONS[0];
+    }
+
+    @Override
+    public boolean canSpawn() {
+        // 检查当前角色是否为我们的自定义角色
+        AbstractPlayer player = com.megacrit.cardcrawl.dungeons.AbstractDungeon.player;
+        return player != null && player instanceof MyCharacter;
     }
 
     public AbstractRelic makeCopy() {

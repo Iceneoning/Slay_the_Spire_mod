@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.EnergizedPower;
+import camellya.power.PhotosynthesisPower;
 
 import static camellya.characters.MyCharacter.PlayerColorEnum.CAMELLYA_GREEN;
 
@@ -31,8 +31,8 @@ public class Photosynthesis extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // 应用能量增加效果，每回合增加1点能量上限
-        addToBot(new ApplyPowerAction(p, p, new EnergizedPower(p, this.magicNumber), this.magicNumber));
+        // 应用每回合递增获得能量的效果（类似Deva Form）
+        addToBot(new ApplyPowerAction(p, p, new PhotosynthesisPower(p, p, this.magicNumber), this.magicNumber));
     }
 
     @Override

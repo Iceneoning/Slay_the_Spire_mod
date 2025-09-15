@@ -74,7 +74,7 @@
   "camellya:BloodsuckingVine": {
     "NAME": "吸血花藤",
     "DESCRIPTION": " 虚无 。对全场敌人造成 8+X 点伤害，并将造成未被格挡的伤害的20%用于回复自己的生命值。",
-    "UPGRADE_DESCRIPTION": " 虚无 。对全场敌人造成 10+2X 点伤害，并将造成未被格挡的伤害的30%用于回复自己的生命值。"
+    "UPGRADE_DESCRIPTION": "对全场敌人造成 10+2X 点伤害，并将造成未被格挡的伤害的30%用于回复自己的生命值。"
   },
   "camellya:BarricadeVine": {
     "NAME": "壁垒花藤",

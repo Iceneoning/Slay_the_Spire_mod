@@ -1,0 +1,226 @@
+{
+  "camellya:Strike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage."
+  },
+  "camellya:Block": {
+    "NAME": "Block",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "camellya:FlowerCard": {
+    "NAME": "Flying Petals",
+    "DESCRIPTION": "Deal 5+X damage to ALL enemies and apply 1+X stacks of camellya:Poisoned.",
+    "UPGRADE_DESCRIPTION": "Deal 7+2X damage to ALL enemies and apply 2+X stacks of camellya:Poisoned."
+  },
+  "camellya:SwitchToBlooming": {
+    "NAME": "Blooming Form",
+    "DESCRIPTION": "Remove camellya:Withering Form. Gain !M! Strength. Gain camellya:Blooming Form. Apply 1 Weak to ALL enemies."
+  },
+  "camellya:SwitchToWithering": {
+    "NAME": "Withering Form",
+    "DESCRIPTION": "Remove camellya:Blooming Form. Gain !M! Dexterity. Gain camellya:Withering Form. Apply 1 Vulnerable to ALL enemies."
+  },
+  "camellya:HarryLuWhirlwind": {
+    "NAME": "Hallelujah Whirlwind",
+    "DESCRIPTION": "Deal 8+X damage to ALL enemies.",
+    "UPGRADE_DESCRIPTION": "Deal 8+2X damage to ALL enemies."
+  },
+  "camellya:LunDa": {
+    "NAME": "Swing",
+    "DESCRIPTION": "Deal 6+Y damage to target enemy.",
+    "UPGRADE_DESCRIPTION": "Deal 9+2Y damage to target enemy."
+  },
+  "camellya:SharpFlowerBranch": {
+    "NAME": "Sharp Flower Branch",
+    "DESCRIPTION": "Deal 11+2Y damage to target enemy. If no other attack cards were played this turn, draw 2 cards.",
+    "UPGRADE_DESCRIPTION": "Deal 14+3Y damage to target enemy. If no other attack cards were played this turn, draw 2 cards."
+  },
+  "camellya:BarbedFlowerBranch": {
+    "NAME": "Barbed Flower Branch",
+    "DESCRIPTION": "Deal 8+Y damage to target enemy. Apply 2 Weak.",
+    "UPGRADE_DESCRIPTION": "Deal 10+2Y damage to target enemy. Apply 3 Weak."
+  },
+  "camellya:RoseSwordsman": {
+    "NAME": "Rose Swordsman",
+    "DESCRIPTION": "Slash target enemy 3 times, dealing 3+Y damage each time, then draw 1 card.",
+    "UPGRADE_DESCRIPTION": "Slash target enemy 3 times, dealing 4+2Y damage each time, then draw 1 card."
+  },
+  "camellya:HuaChao": {
+    "NAME": "Flower Festival",
+    "DESCRIPTION": "Deal 4+X+Y damage to 2 random enemies, then gain !B! Block.",
+    "UPGRADE_DESCRIPTION": "Deal 5+2X+2Y damage to 2 random enemies, then gain !B! Block."
+  },
+  "camellya:LuoHong": {
+    "NAME": "Fallen Petals",
+    "DESCRIPTION": "Deal 4+2X damage to ALL enemies and gain Block equal to half the unblocked damage dealt (rounded down).",
+    "UPGRADE_DESCRIPTION": "Deal 6+2X damage to ALL enemies and gain Block equal to half the unblocked damage dealt (rounded down)."
+  },
+  "camellya:LoveFlower": {
+    "NAME": "Love Flower",
+    "DESCRIPTION": "Deal 7+2Y damage to target enemy and reduce their Strength by Y+1.",
+    "UPGRADE_DESCRIPTION": "Deal 7+3Y damage to target enemy and reduce their Strength by Y+2."
+  },
+  "camellya:WillowWhip": {
+    "NAME": "Willow Whip",
+    "DESCRIPTION": "Whip 3 times, dealing !D! damage to ALL enemies each time, then put 1 card from your hand into the discard pile.",
+    "UPGRADE_DESCRIPTION": "Whip 3 times, dealing !D! damage to ALL enemies each time, then put 1 card from your hand into the discard pile."
+  },
+  "camellya:SuffocatingVine": {
+    "NAME": "Suffocating Vine",
+    "DESCRIPTION": "Deal 8+2Y damage to target enemy and apply 1+Y Suffocation.",
+    "UPGRADE_DESCRIPTION": "Deal 11+3Y damage to target enemy and apply 2+2Y Suffocation."
+  },
+  "camellya:BloodsuckingVine": {
+    "NAME": "Bloodsucking Vine",
+    "DESCRIPTION": "Ethereal. Deal 8+X damage to ALL enemies and heal HP equal to 20% of unblocked damage dealt.",
+    "UPGRADE_DESCRIPTION": "Deal 10+2X damage to ALL enemies and heal HP equal to 30% of unblocked damage dealt."
+  },
+  "camellya:BarricadeVine": {
+    "NAME": "Barricade Vine",
+    "DESCRIPTION": "Deal 12+2X+2Y damage to target enemy and gain 3+X+2Y Block.",
+    "UPGRADE_DESCRIPTION": "Deal 16+2X+2Y damage to target enemy and gain 5+2X+3Y Block."
+  },
+  "camellya:FallenCamellia": {
+    "NAME": "Fallen Camellia",
+    "DESCRIPTION": "Shatter all of a target enemy's Block, then deal 12+2Y damage to that enemy.",
+    "UPGRADE_DESCRIPTION": "Shatter all of a target enemy's Block, then deal 18+3Y damage to that enemy."
+  },
+  "camellya:OleanderBranch": {
+    "NAME": "Oleander Branch",
+    "DESCRIPTION": "Stab target enemy with an oleander branch, dealing 12+2Y damage and applying 3 turns of Vulnerable and 3 turns of Weak.",
+    "UPGRADE_DESCRIPTION": "Stab target enemy with an oleander branch, dealing 15+3Y damage and applying 4 turns of Vulnerable and 4 turns of Weak."
+  },
+  "camellya:ReedAutumn": {
+    "NAME": "Reed Autumn",
+    "DESCRIPTION": "Sweep a target enemy with bleak autumn wind, dealing 11+2Y damage and applying 3 stacks of camellya:Poisoned.",
+    "UPGRADE_DESCRIPTION": "Sweep a target enemy with bleak autumn wind, dealing 14+3Y damage and applying 3 stacks of camellya:Poisoned."
+  },
+  "camellya:FallenLeaves": {
+    "NAME": "Fallen Leaves",
+    "DESCRIPTION": "Deal 28+3X+2Y damage to ALL enemies and apply 2 turns of Vulnerable.",
+    "UPGRADE_DESCRIPTION": "Deal 32+4X+3Y damage to ALL enemies and apply 3 turns of Vulnerable."
+  },
+  "camellya:OneDayFlower": {
+    "NAME": "One-Day Flower",
+    "DESCRIPTION": "Exhaust. Deal 48 + 3X damage to ALL enemies. Gain 4 Strength.",
+    "UPGRADE_DESCRIPTION": "Exhaust. Deal 57 + 4X damage to ALL enemies. Gain 6 Strength."
+  },
+  "camellya:BloomingAshes": {
+    "NAME": "Blooming Ashes",
+    "DESCRIPTION": "Exhaust. Deal 24+2X damage to ALL enemies, apply Y+2 turns of Weak, Y+2 turns of Vulnerable, and 4 stacks of camellya:Poisoned.",
+    "UPGRADE_DESCRIPTION": "Exhaust. Deal 28+3X damage to ALL enemies, apply Y+2 turns of Weak, Y+2 turns of Vulnerable, and 4 stacks of camellya:Poisoned."
+  },
+  "camellya:ColdResistant": {
+    "NAME": "Cold Resistant",
+    "DESCRIPTION": "Gain 1 Artifact. Gain 1 Strength.",
+    "UPGRADE_DESCRIPTION": "Gain 1 Artifact. Gain 2 Strength."
+  },
+  "camellya:HeatRelief": {
+    "NAME": "Heat Relief",
+    "DESCRIPTION": "Heal 10 HP and gain 10 Block. Exhaust."
+  },
+  "camellya:ThornDense": {
+    "NAME": "Thorn Dense",
+    "DESCRIPTION": "Gain 9 Block. Gain 3 Thorns.",
+    "UPGRADE_DESCRIPTION": "Gain 12 Block. Gain 5 Thorns."
+  },
+  "camellya:SpringBirth": {
+    "NAME": "Spring Birth",
+    "DESCRIPTION": "Heal 6 HP and gain 2 Dexterity.",
+    "UPGRADE_DESCRIPTION": "Heal 9 HP and gain 4 Dexterity."
+  },
+  "camellya:SummerGrowth": {
+    "NAME": "Summer Growth",
+    "DESCRIPTION": "Gain 2 Strength.",
+    "UPGRADE_DESCRIPTION": "Gain 4 Strength."
+  },
+  "camellya:AutumnHarvest": {
+    "NAME": "Autumn Harvest",
+    "DESCRIPTION": "Apply 3 Weak and 3 Vulnerable to ALL enemies. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply 3 Weak and 3 Vulnerable to ALL enemies. Exhaust. Cost becomes 0."
+  },
+  "camellya:WinterStorage": {
+    "NAME": "Winter Storage",
+    "DESCRIPTION": "Retaliate against the next 2 attacks with your base attack.",
+    "UPGRADE_DESCRIPTION": "Retaliate against the next 3 attacks with your base attack."
+  },
+  "camellya:Redemption": {
+    "NAME": "Redemption",
+    "DESCRIPTION": "Gain 2 energy next turn.",
+    "UPGRADE_DESCRIPTION": "Gain 3 energy next turn."
+  },
+  "camellya:BloomingWitheringWaltz": {
+    "NAME": "Blooming and Withering Waltz",
+    "DESCRIPTION": "Gain 2 Strength and 2 Dexterity.",
+    "UPGRADE_DESCRIPTION": "Gain 2 Strength and 2 Dexterity."
+  },
+  "camellya:BotanicalCosmos": {
+    "NAME": "Botanical Cosmos",
+    "DESCRIPTION": "Ethereal. Gain 12 Block and 1 Dexterity.",
+    "UPGRADE_DESCRIPTION": "Gain 12 Block and 1 Dexterity."
+  },
+  "camellya:SoundSleep": {
+    "NAME": "Sound Sleep",
+    "DESCRIPTION": "Gain 1 energy and draw 2 cards.",
+    "UPGRADE_DESCRIPTION": "Gain 2 energy and draw 3 cards."
+  },
+  "camellya:FlowerSecret": {
+    "NAME": "Flower Secret",
+    "DESCRIPTION": "Exhaust. Gain 2 Dexterity, discard 1 card, then draw 3 cards.",
+    "UPGRADE_DESCRIPTION": "Exhaust. Gain 3 Dexterity, discard 1 card, then draw 4 cards."
+  },
+  "camellya:SpringBeauty": {
+    "NAME": "Spring Beauty",
+    "DESCRIPTION": "Gain 2 Strength and 2 Dexterity, and 4 stacks of Metallicize.",
+    "UPGRADE_DESCRIPTION": "Gain 4 Strength and 4 Dexterity, and 5 stacks of Metallicize."
+  },
+  "camellya:SpringHeart": {
+    "NAME": "Spring Heart",
+    "DESCRIPTION": "Immediately restore 1 exhausted card and make its cost 0 this turn.",
+    "UPGRADE_DESCRIPTION": "Immediately restore 1 exhausted card and make its cost 0 this turn."
+  },
+  "camellya:ShoreKeeperBlessing": {
+    "NAME": "Shore Keeper's Blessing",
+    "DESCRIPTION": "Gain 1 Buffer.",
+    "UPGRADE_DESCRIPTION": "Gain 1 Buffer."
+  },
+  "camellya:RestAndRecover": {
+    "NAME": "Rest and Recover",
+    "DESCRIPTION": "At the end of your turn, heal 2 HP and gain 1 Strength.",
+    "UPGRADE_DESCRIPTION": "At the end of your turn, heal 3 HP and gain 1 Strength."
+  },
+  "camellya:FertileSoil": {
+    "NAME": "Fertile Soil",
+    "DESCRIPTION": "Whenever a card is exhausted, immediately draw 1 card.",
+    "UPGRADE_DESCRIPTION": "Whenever a card is exhausted, immediately draw 2 cards."
+  },
+  "camellya:Photosynthesis": {
+    "NAME": "Photosynthesis",
+    "DESCRIPTION": "After playing, increase your energy cap by 1 for the rest of combat.",
+    "UPGRADE_DESCRIPTION": "After playing, increase your energy cap by 1 for the rest of combat."
+  },
+  "camellya:CamelliaFertilizer": {
+    "NAME": "Camellia Fertilizer",
+    "DESCRIPTION": "Whenever an enemy dies, gain 6 Block and 1 Dexterity.",
+    "UPGRADE_DESCRIPTION": "Whenever an enemy dies, gain 8 Block and 2 Dexterity."
+  },
+  "camellya:BlowAgain": {
+    "NAME": "Blow Again",
+    "DESCRIPTION": "The first attack that deals damage to you each turn heals you for 4 HP and gives you 1 Strength.",
+    "UPGRADE_DESCRIPTION": "The first attack that deals damage to you each turn heals you for 6 HP and gives you 2 Strength."
+  },
+  "camellya:BeyondWithering": {
+    "NAME": "Beyond Withering",
+    "DESCRIPTION": "After using, Block will not disappear at the end of turn.",
+    "UPGRADE_DESCRIPTION": "After using, Block will not disappear at the end of turn."
+  },
+  "camellya:WitheringForm": {
+    "NAME": "Withering Form",
+    "DESCRIPTION": "Gain #b%d Dexterity."
+  },
+  "camellya:BloomingForm": {
+    "NAME": "Blooming Form",
+    "DESCRIPTION": "Gain #b%d Strength."
+  }
+}

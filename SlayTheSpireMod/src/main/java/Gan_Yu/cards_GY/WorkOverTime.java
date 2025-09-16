@@ -40,8 +40,6 @@ public class WorkOverTime extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            // 升级后移除虚无特性
-            this.isEthereal = false;
             this.upgradeBaseCost(3);
             this.rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION;
             this.initializeDescription();

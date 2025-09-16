@@ -208,6 +208,15 @@ public class ChargePower extends AbstractPower {
                 // 如果方法不存在或调用失败，忽略错误
             }
         }
+        // 触发CountlessTrialsPower效果：先消耗再获得
+        if (this.owner.hasPower("Gan_Yu:CountlessTrialsPower")) {
+            AbstractPower countless = this.owner.getPower("Gan_Yu:CountlessTrialsPower");
+            try {
+                countless.getClass().getMethod("onChargeConsumed", int.class).invoke(countless, consumedAmount);
+            } catch (Exception e) {
+                // 如果方法不存在或调用失败，忽略错误
+            }
+        }
         
         // 添加蓄力消耗标记
         addChargeConsumedMarker();
